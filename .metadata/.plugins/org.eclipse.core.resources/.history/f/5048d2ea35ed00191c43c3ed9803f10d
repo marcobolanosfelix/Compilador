@@ -1,0 +1,23 @@
+package Compilador02;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.*;
+public class TablaSimbolos extends JFrame implements ActionListener {
+	JTable tabla;
+	JScrollPanel scrol;
+	public TablaSimbolos() {
+		hazInterfaz();
+	}
+	public void hazInterfaz() {
+		setResizable(false);
+		setSize(600,400);
+		setLocationRelativeTo(null);
+		setVisible(true);
+	}
+	public static void main(String[] args) {
+		new TablaSimbolos();
+	}
+	public void actionPerformed(ActionEvent e) {
+	}
+
+}

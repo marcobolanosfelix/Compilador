@@ -1,0 +1,29 @@
+package Compilador02;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
+public class TablaSimbolos extends JFrame {
+	JTable tabla;
+	JScrollPane antetabla;
+	DefaultTableModel modelo;
+	public TablaSimbolos() {
+		hazInterfaz();
+	}
+	public void hazInterfaz() {
+		setResizable(false);
+		setSize(600,400);
+		setLocationRelativeTo(null);
+		modelo=new DefaultTableModel();
+		JTable cola = new JTable(modelo);
+		cola.removeAll();
+		antetabla=new JScrollPane(cola);
+		cola.setBounds(50, 10, 100, 50);
+		antetabla.setBounds(10, 0, 400, 450);
+		add(antetabla);
+		setVisible(true);
+	}
+	public static void main(String[] args) {
+		new TablaSimbolos();
+	}
+}
